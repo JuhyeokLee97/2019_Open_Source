@@ -88,7 +88,7 @@ void rotate(struct Square m[][SIZE]) {
       m[n-j-1][i] = temp;
     }
   }
-}/* 함수 실행 예시 (when i++)
+}/* 함수 실행 예시
   ====[Before Matrix]====
   a11   a12   a13   a14
   a21   a22   a23   a24
