@@ -26,6 +26,7 @@ void slideArrayToRight(struct Square arr[]) {
 			}
 			else if (arr[j + 1].value == arr[j].value) {
 				mergeCells(arr, j, j + 1);
+                j++;
 			}
 		}
 	}
