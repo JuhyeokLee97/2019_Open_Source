@@ -20,11 +20,11 @@ void slideArrayToRight(struct Square arr[]) {
 		if (!arr[i].value) continue;
 
 		for (j = i; j < SIZE - 1; j++) {
-			if (arr[j + 1].used) continue;
-			if (!arr[j + 1].value) {
+			if (arr[j + 1].used) continue;  // isArrUsed(struct)
+			if (!arr[j + 1].value) { // isEmptyValue(struct)
 				rightShiftCell(arr, j);
 			}
-			else if (arr[j + 1].value == arr[j].value) {
+			else if (arr[j + 1].value == arr[j].value) {    // isEqual(int, int)
 				mergeCells(arr, j, j + 1);
                 j++;
 			}
@@ -62,6 +62,6 @@ void handleMove(int direction, struct Square m[][SIZE]) {
 	for (i = 0; i < SIZE; i++) {
 		slideArrayToRight(m[i]);
 	}
-	if (direction != RIGHT) doRotations(m, 4 - times);
+	if (direction != RIGHT) doRotations(m, 4 - times); // isRight(int)
 }
 
