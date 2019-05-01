@@ -155,7 +155,7 @@ int readMove() {
 		printf("Make a move: moves right %d, down %d, left %d, up %d \n",
 			RIGHT, DOWN, LEFT, UP); //사용자에게 이동 방향을 입력하라고 출력함
 		scanf("%d", &move); //사용자에게 이동 방향을 입력받음
-		if (move >= 0 && move < 3) validMove = 1; //이동 방향이 아래, 왼쪽, 오른쪽 중 하나이면 validMove를 1로 바꿔 while문을 빠져나감
+		if (move >= 0 && move <= 3) validMove = 1; //이동 방향이 아래, 왼쪽, 오른쪽 중 하나이면 validMove를 1로 바꿔 while문을 빠져나감
 	}
 	return move; //입력받은 이동 방향을 리턴
 }
