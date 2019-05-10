@@ -22,3 +22,24 @@ int readMove() {
 	}
 	return move;
 }
+
+int isArrUsed(struct Square arr){
+	if (arr.used == 1)
+		return 1;
+	else
+		return 0;
+}
+
+int isEmptyValue(struct Square arr){
+	if (arr.value == 0)
+		return 1;
+	else
+		return 0;
+}
+
+int isEqualofValue(struct Square A, struct Square B){
+	if (A.value == B.value)
+		return 1;
+	else
+		return 0;
+}

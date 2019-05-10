@@ -5,5 +5,8 @@
 
 int playerWon(struct Square m[][SIZE]);
 int readMove();
+int isArrUsed(struct Square arr);
+int isEmptyValue(struct Square arr);
+int isEqualofValue(struct Square A, struct Square B);
 
 #endif

@@ -1,5 +1,5 @@
 #include "moveCells.h"
-
+#include "commonFunc.h"
 
 void rightShiftCell(struct Square arr[], int currentPos) {
 	arr[currentPos + 1].value = arr[currentPos].value;
@@ -17,14 +17,14 @@ void slideArrayToRight(struct Square arr[]) {
 	int i, j;
 
 	for (i = SIZE - 2; i >= 0; i--) {
-		if (!arr[i].value) continue;
+		if (isEmptyValue(arr[i])) continue;
 
 		for (j = i; j < SIZE - 1; j++) {
-			if (arr[j + 1].used) continue;  // isArrUsed(struct)
-			if (!arr[j + 1].value) { // isEmptyValue(struct)
+			if (isArrUsed(arr[j+1])) continue;  // isArrUsed(struct)
+			if (isEmptyValue(arr[j+1])) { // isEmptyValue(struct)
 				rightShiftCell(arr, j);
 			}
-			else if (arr[j + 1].value == arr[j].value) {    // isEqual(int, int)
+			else if (isEqualofValue(arr[j+1], arr[j])) {    // isEqual(int, int)
 				mergeCells(arr, j, j + 1);
                 j++;
 			}
