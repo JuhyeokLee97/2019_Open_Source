@@ -1,4 +1,4 @@
-#include "movingCells.h"
+#include "moveCells.h"
 
 
 void rightShiftCell(struct Square arr[], int currentPos) {
