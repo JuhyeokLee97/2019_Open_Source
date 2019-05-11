@@ -50,7 +50,7 @@ void updateBoardCells(struct Square m[][SIZE], int value, int used) {
 
 void initBoard(struct Square m[][SIZE]) {
 	updateBoardCells(m, 0, 0);
-	int i, randomSquares = 6;
+	int i, randomSquares = 3;
 	for (i = 0; i < randomSquares; i++) {
 		addRandomSquare(m);
 	}

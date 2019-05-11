@@ -12,6 +12,7 @@ int main() {
 	int move = 0;
 	while (1) {
 		draw(board);
+		
 		if (playerWon(board)) break;
 
 		addRandomSquare(board);
