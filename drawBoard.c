@@ -11,6 +11,7 @@ void draw(struct Square m[][SIZE]) {
 }
 
 int generateRandom(int min, int max) {
+	srand();
 	return rand() % (max - min + 1) + min;
 }
 
