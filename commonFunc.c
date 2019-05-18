@@ -18,7 +18,7 @@ int readMove() {
 		printf("Make a move: moves right %d, down %d, left %d, up %d \n",
 			RIGHT, DOWN, LEFT, UP);
 		scanf("%d", &move);
-		if (move >= 0 && move < 3) validMove = 1;
+		if (move >= 0 && move <= 3) validMove = 1;
 	}
 	return move;
 }
