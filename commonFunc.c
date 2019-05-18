@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "basicInfo.h"
 #include "commonFunc.h"
+#include "drawBoard.h"
 
 int playerWon(struct Square m[][SIZE]) {
 	int i, j;
@@ -39,6 +40,16 @@ int isEmptyValue(struct Square arr){
 
 int isEqualofValue(struct Square A, struct Square B){
 	if (A.value == B.value)
+		return 1;
+	else
+		return 0;
+}
+int playerLose(struct Squre m[][SIZE]){
+	struct Pos empty[SIZE*SIZE];
+	int cnt_empty = 0;
+	cnt_empty = getEmptyCells(empty, m);
+	
+	if (cnt_empty == 0)
 		return 1;
 	else
 		return 0;

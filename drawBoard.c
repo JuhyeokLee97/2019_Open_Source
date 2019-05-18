@@ -1,4 +1,5 @@
 #include "drawBoard.h"
+#include "commonFunc.h"
 
 void draw(struct Square m[][SIZE]) {
 	int i, j;
@@ -12,7 +13,7 @@ void draw(struct Square m[][SIZE]) {
 
 int generateRandom(int min, int max) {
 	srand();
-	return rand() % (max - min + 1) + min;
+	return rand() % (max - min) + min;
 }
 
 int getEmptyCells(struct Pos empty[], struct Square m[][SIZE]) {
@@ -20,7 +21,7 @@ int getEmptyCells(struct Pos empty[], struct Square m[][SIZE]) {
 	int n = 0;
 	for (i = 0; i < SIZE; i++)
 		for (j = 0; j < SIZE; j++)
-			if (!m[i][j].value) {
+			if (isEmptyValue(m[i][j])) {
 				struct Pos temp;
 				temp.x = i;
 				temp.y = j;
