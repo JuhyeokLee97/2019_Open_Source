@@ -11,6 +11,7 @@ int main() {
 
 	int move = 0;
 	while (1) {
+		system("cls");
 		draw(board);
 		
 		if (playerWon(board)) break;
