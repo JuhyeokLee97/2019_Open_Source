@@ -8,5 +8,6 @@ int readMove();
 int isArrUsed(struct Square arr);
 int isEmptyValue(struct Square arr);
 int isEqualofValue(struct Square A, struct Square B);
+int isPlayerLose(struct Squre m[][SIZE]);
 int playerLose(struct Squre m[][SIZE]);
 #endif
