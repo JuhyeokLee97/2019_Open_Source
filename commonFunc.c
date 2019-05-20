@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <string.h> // memcpy함수를 사용하기 위해서.
-#include <Windows.h>
 #include "basicInfo.h"
 #include "commonFunc.h"
 #include "drawBoard.h"
@@ -56,9 +54,6 @@ int isPlayerLose(struct Squre m[][SIZE]){
 		return 0;
 
 	else{
-		printf("\t cnt_empty is %d\n", cnt_empty);
-		printf("\tfinding 4 cases\n");
-		
 		if (playerLose(m))
 			return 1;
 		else
@@ -68,60 +63,16 @@ int isPlayerLose(struct Squre m[][SIZE]){
 }
 
 int playerLose(struct Squre m[][SIZE]){
-	struct Square temp_board_right[SIZE][SIZE];
-	struct Square temp_board_down[SIZE][SIZE];
-	struct Square temp_board_left[SIZE][SIZE];
-	struct Square temp_board_up[SIZE][SIZE];
+	struct Square temp_board[SIZE][SIZE];
 	struct Pos empty[SIZE*SIZE];
 	
-	cpyBoard(temp_board_right, m);
-	cpyBoard(temp_board_down, m);
-	cpyBoard(temp_board_left, m);
-	cpyBoard(temp_board_up, m);
-	
-	puts("--------------------------");
-	draw(temp_board_right);
-
-	// 오른쪽 이동 가능한 경우
-	handleMove(0, temp_board_right);
-	if (getEmptyCells(empty, temp_board_right) > 0)
-	{
-		printf("Right\n");
-		draw(temp_board_right);
-		Sleep(3000);
-		return 0;
-	}
-	// 아래쪽 이동 가능한 경우
-	handleMove(1, temp_board_down);
-	if (getEmptyCells(empty, temp_board_down) > 0)
-	{
-		printf("Down\n");
-		draw(temp_board_down);
-		Sleep(3000);
-		return 0;
-	}
-	
-	// 왼쪽 이동 가능한 경우
-	handleMove(2, temp_board_left);
-	if (getEmptyCells(empty, temp_board_left) > 0)
-	{
-		printf("Left\n");
-		draw(temp_board_left);
-		Sleep(3000);
-		return 0;
+	for (int i = 0; i < 4; i++){
+		cpyBoard(temp_board, m);
+		handleMove(i, temp_board);
+		if (getEmptyCells(empty, temp_board) > 0)
+			return 0;
 	}
 
-	// 위쪽 이동 가능한 경우
-	handleMove(3, temp_board_up);
-	if (getEmptyCells(empty, temp_board_up) > 0)
-	{
-		printf("Up\n");
-		draw(temp_board_up);
-		Sleep(3000);
-		return 0;
-	}
-	printf("\tNone 이동 가능\n");
-	Sleep(3000);
 	return 1;
 }
 
