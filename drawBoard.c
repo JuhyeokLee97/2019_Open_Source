@@ -1,4 +1,3 @@
-#include <time.h>
 #include "drawBoard.h"
 #include "commonFunc.h"
 
@@ -13,7 +12,7 @@ void draw(struct Square m[][SIZE]) {
 }
 
 int generateRandom(int min, int max) {
-	srand(time(NULL));
+	srand();
 	return rand() % (max - min) + min;
 }
 
