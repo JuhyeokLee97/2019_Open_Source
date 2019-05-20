@@ -31,7 +31,6 @@ int main() {
 			break;
 		}
 	}
-	puts("\tThe End\n");
 	return 0;
 }
 
