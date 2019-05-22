@@ -77,6 +77,7 @@ int playerLose(struct Squre m[][SIZE]){
 }
 
 void cpyBoard(struct Square temp[][SIZE], struct Square m[][SIZE]){
+	// memcpy함수로 이용할 수 있으면 좋을 것 같다.
 
 	for (int i = 0; i < SIZE; i++){
 		for (int j = 0; j < SIZE; j++){
