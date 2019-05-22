@@ -67,27 +67,23 @@ int playerLose(struct Squre m[][SIZE]){
 	struct Square temp_board[SIZE][SIZE];
 	struct Pos empty[SIZE*SIZE];
 	
-	memcpy(&temp_board, &m, sizeof(struct Square));
-
-	// 오른쪽 이동 가능한 경우
-	handleMove(0, temp_board);
-	if (getEmptyCells(empty, temp_board) > 0)
-		return 0;
-
-	// 아래쪽 이동 가능한 경우
-	handleMove(1, temp_board);
-	if (getEmptyCells(empty, temp_board) > 0)
-		return 0;
-	
-	// 왼쪽 이동 가능한 경우
-	handleMove(2, temp_board);
-	if (getEmptyCells(empty, temp_board) > 0)
-		return 0;
-
-	// 위쪽 이동 가능한 경우
-	handleMove(3, temp_board);
-	if (getEmptyCells(empty, temp_board) > 0)
-		return 0;
+	for (int i = 0; i < 4; i++){
+		cpyBoard(temp_board, m);
+		handleMove(i, temp_board);
+		if (getEmptyCells(empty, temp_board) > 0)
+			return 0;
+	}
 
 	return 1;
+}
+
+void cpyBoard(struct Square temp[][SIZE], struct Square m[][SIZE]){
+	// memcpy함수로 이용할 수 있으면 좋을 것 같다.
+
+	for (int i = 0; i < SIZE; i++){
+		for (int j = 0; j < SIZE; j++){
+			temp[i][j].used = m[i][j].used;
+			temp[i][j].value = m[i][j].value;
+		}
+	}
 }

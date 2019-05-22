@@ -10,4 +10,5 @@ int isEmptyValue(struct Square arr);
 int isEqualofValue(struct Square A, struct Square B);
 int isPlayerLose(struct Squre m[][SIZE]);
 int playerLose(struct Squre m[][SIZE]);
+void cpyBoard(struct Square temp[][SIZE], struct Square m[][SIZE]);
 #endif
