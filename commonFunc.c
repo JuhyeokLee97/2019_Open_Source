@@ -16,11 +16,17 @@ int playerWon(struct Square m[][SIZE]) {
 }
 
 int readMove() {
-	int move, validMove = 0;
+	char move;
+	int validMove = 0;
 	while (!validMove) {
-		printf("Make a move: moves right %d, down %d, left %d, up %d \n",
-			RIGHT, DOWN, LEFT, UP);
-		scanf("%d", &move);
+		printf("UP : W, LEFT : A, DOWN : S, RIGHT : D\n");
+		printf("Move : ");
+		scanf("%c", &move);
+		getchar();
+		if (move == 'w' || move == 'W') move = UP;
+		if (move == 'a' || move == 'A') move = LEFT;
+		if (move == 's' || move == 'S') move = DOWN;
+		if (move == 'd' || move == 'D') move = RIGHT;
 		if (move >= 0 && move <= 3) validMove = 1;
 	}
 	return move;
