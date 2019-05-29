@@ -17,7 +17,9 @@ The game's objective is to slide numbered tiles on a grid to combine them to cre
 
 2048 is licensed under the [MIT license.](https://github.com/zero5two4/2019_Open_Source/blob/master/LICENSE)
 
-
+<br>
+<br>
+<br>
 
 # 2048 게임
 
