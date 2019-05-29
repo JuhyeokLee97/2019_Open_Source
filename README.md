@@ -17,6 +17,8 @@ The game's objective is to slide numbered tiles on a grid to combine them to cre
 
 2048 is licensed under the [MIT license.](https://github.com/zero5two4/2019_Open_Source/blob/master/LICENSE)
 
+
+
 # 2048 게임
 
 2048 게임은 이탈리아 웹 개발자 Gabriele Cirulli에 의해 디자인된 블록을 이동시키는 1인 퍼즐게임이다.
