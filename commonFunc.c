@@ -18,7 +18,7 @@ int playerWon(struct Square m[][SIZE]) {
 int readMove() {
 	char move;
 	int validMove = 0;
-	while (!validMove) {
+	while (isValidMove(validMove)) {
 		printf("UP : W, LEFT : A, DOWN : S, RIGHT : D\n");
 		printf("Move : ");
 		scanf("%c", &move);
@@ -57,15 +57,14 @@ int isPlayerLose(struct Squre m[][SIZE]){
 	int cnt_empty = 0;
 	cnt_empty = getEmptyCells(empty, m);
 
-	if (cnt_empty > 0)
-		return 0;
-
-	else{
+	if (cnt_empty == 0){
 		if (playerLose(m))
 			return 1;
 		else
 			return 0;
 	}
+	else
+		return 0;
 	
 }
 
@@ -92,4 +91,11 @@ void cpyBoard(struct Square temp[][SIZE], struct Square m[][SIZE]){
 			temp[i][j].value = m[i][j].value;
 		}
 	}
+}
+
+int isValidMove(int validMove){
+	if (validMove == 0)
+		return 1;
+	else
+		return 0;
 }
