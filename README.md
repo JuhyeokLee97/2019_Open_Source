@@ -5,9 +5,9 @@ The game's objective is to slide numbered tiles on a grid to combine them to cre
 
 ## Contributions
 
- Team Leader [Juhyoek Lee](https://github.com/zero5two4) 
- Team Member [TaeHeul Jeon](https://github.com/taeheuljeon)
- Team Member [Minju Kim](https://github.com/min942773)
+ - Team Leader [Juhyoek Lee](https://github.com/zero5two4) 
+ - Team Member [TaeHeul Jeon](https://github.com/taeheuljeon)
+ - Team Member [Minju Kim](https://github.com/min942773)
 
 ## Screenshot
 
@@ -26,9 +26,9 @@ The game's objective is to slide numbered tiles on a grid to combine them to cre
 
 ## 참여한 사람들
 
- 팀장 [이주혁](https://github.com/zero5two4)
- 팀원 [전태흘](https://github.com/taeheuljeon)
- 팀원 [김민주](https://github.com/min942773)
+ - 팀장 [이주혁](https://github.com/zero5two4)
+ - 팀원 [전태흘](https://github.com/taeheuljeon)
+ - 팀원 [김민주](https://github.com/min942773)
 
 ## 스크린샷
 
