@@ -22,7 +22,7 @@ int readMove() {
 		printf("UP : W, LEFT : A, DOWN : S, RIGHT : D\n");
 		printf("Move : ");
 		scanf("%c", &move);
-		getchar();
+		while(getchar() != '\n');
 		if (move == 'w' || move == 'W') move = UP;
 		if (move == 'a' || move == 'A') move = LEFT;
 		if (move == 's' || move == 'S') move = DOWN;
