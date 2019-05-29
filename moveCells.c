@@ -25,8 +25,9 @@ void slideArrayToRight(struct Square arr[]) {
 				rightShiftCell(arr, j);
 			}
 			else if (isEqualofValue(arr[j+1], arr[j])) {    // isEqual(int, int)
-				mergeCells(arr, j, j + 1);
-                j++;
+				if(isArrUsed(arr[j]) == 0)
+					mergeCells(arr, j, j + 1);
+                		j++;
 			}
 		}
 	}
