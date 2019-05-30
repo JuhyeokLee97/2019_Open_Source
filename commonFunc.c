@@ -41,9 +41,9 @@ int isArrUsed(struct Square arr){
 
 int isEmptyValue(struct Square arr){
 	if (arr.value != EMPTY)
-		return TRUE;
-	else
 		return FALSE;
+	else
+		return TRUE;
 }
 
 int isEqualofValue(struct Square A, struct Square B){
