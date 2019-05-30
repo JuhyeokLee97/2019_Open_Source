@@ -9,9 +9,9 @@ The game's objective is to slide numbered tiles on a grid to combine them to cre
  - Team Member [TaeHeul Jeon](https://github.com/taeheuljeon)
  - Team Member [Minju Kim](https://github.com/min942773)
 
-## Screenshot
+## Installation
 
-(...)
+All header files and source files are written in C. You can run files in Visual Studio 2017.
 
 ## License
 
@@ -32,9 +32,9 @@ The game's objective is to slide numbered tiles on a grid to combine them to cre
  - 팀원 [전태흘](https://github.com/taeheuljeon)
  - 팀원 [김민주](https://github.com/min942773)
 
-## 스크린샷
+## 설치
 
-(추가 예정)
+모든 헤더 파일과 소스 파일은 C언어로 작성되었다. Visual Studio 2017에서 파일을 실행시키면 원활히 작동된다.
 
 ## 라이선스
 
