@@ -10,7 +10,7 @@ int main() {
 	initBoard(board);
 
 	int move = 0;
-	while (1) {
+	while (TRUE) {
 		system("cls");
 		
 		if (playerWon(board)) 
@@ -21,7 +21,7 @@ int main() {
 		addRandomSquare(board);
 		draw(board);
 
-		int move = readMove();
+		move = readMove();
 		handleMove(move, board);
 		cleanCells(board);
 
