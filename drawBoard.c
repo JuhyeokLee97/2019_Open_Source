@@ -15,7 +15,7 @@ void draw(struct Square m[][SIZE]) {
 int generateRandom(int min, int max) {
 	srand(time(NULL));
 	return rand() % (max - min) + min;
-}/* 매개변수 min과 max의 사이의 임의으 수를 반환한다. */
+}/* 매개변수 min과 max의 사이의 임의으; 수를 반환한다. */
 
 int getEmptyCells(struct Pos empty[], struct Square m[][SIZE]) {
 	int i, j;
