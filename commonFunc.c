@@ -57,15 +57,14 @@ int isPlayerLose(struct Squre m[][SIZE]){
 	int cnt_empty = 0;
 	cnt_empty = getEmptyCells(empty, m);
 
-	if (cnt_empty > 0)
-		return 0;
-
-	else{
+	if (cnt_empty == 0) {
 		if (playerLose(m))
 			return 1;
 		else
 			return 0;
 	}
+	else
+		return 0;
 	
 }
 
