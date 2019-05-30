@@ -92,3 +92,10 @@ void cpyBoard(struct Square temp[][SIZE], struct Square m[][SIZE]){
 		}
 	}
 }
+
+int isValidMove(int validMove) {
+	if (validMove == 0)
+		return 1;
+	else
+		return 0;
+}
