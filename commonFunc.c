@@ -52,12 +52,9 @@ int isEqualofValue(struct Square A, struct Square B){
 	else
 		return 0;
 }
-int isPlayerLose(struct Squre m[][SIZE]){
-	struct Pos empty[SIZE*SIZE];
-	int cnt_empty = 0;
-	cnt_empty = getEmptyCells(empty, m);
 
-	if (cnt_empty == 0){
+int isPlayerLose(struct Squre m[][SIZE]) {
+	if (!EmptyCellExists(m)) {
 		if (playerLose(m))
 			return 1;
 		else
@@ -65,7 +62,7 @@ int isPlayerLose(struct Squre m[][SIZE]){
 	}
 	else
 		return 0;
-	
+
 }
 
 int playerLose(struct Squre m[][SIZE]){
@@ -98,4 +95,16 @@ int isValidMove(int validMove){
 		return 1;
 	else
 		return 0;
+}
+
+int EmptyCellExists(struct Squre m[][SIZE]) {
+	struct Pos empty[SIZE*SIZE];
+	int cnt_empty = getEmptyCells(empty, m);
+
+	if (cnt_empty == 0) {
+		return 0;
+	}
+	else {
+		return 1;
+	}
 }
