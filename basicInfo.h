@@ -3,7 +3,7 @@
 #define __BASICINFO_H__
 
 #define SIZE 4
-#define TURE 1
+#define TRUE 1
 #define FALSE 0
 
 enum directions { RIGHT, DOWN, LEFT, UP };

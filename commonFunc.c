@@ -9,10 +9,10 @@ int playerWon(struct Square m[][SIZE]) {
 	int i, j;
 	for (i = 0; i < SIZE; i++) {
 		for (j = 0; j < SIZE; j++) {
-			if (m[i][j].value == 2048) return 1;
+			if (m[i][j].value == 2048) return TRUE;
 		}
 	}
-	return 0;
+	return FALSE;
 }
 
 int readMove() {
@@ -34,23 +34,23 @@ int readMove() {
 
 int isArrUsed(struct Square arr){
 	if (arr.used == 1)
-		return 1;
+		return TRUE;
 	else
-		return 0;
+		return FALSE;
 }
 
 int isEmptyValue(struct Square arr){
 	if (arr.value == 0)
-		return 1;
+		return TRUE;
 	else
-		return 0;
+		return FALSE;
 }
 
 int isEqualofValue(struct Square A, struct Square B){
 	if (A.value == B.value)
-		return 1;
+		return TRUE;
 	else
-		return 0;
+		return FALSE;
 }
 int isPlayerLose(struct Squre m[][SIZE]){
 	struct Pos empty[SIZE*SIZE];
@@ -76,10 +76,10 @@ int playerLose(struct Squre m[][SIZE]){
 		cpyBoard(temp_board, m);
 		handleMove(i, temp_board);
 		if (getEmptyCells(empty, temp_board) > 0)
-			return 0;
+			return FALSE;
 	}
 
-	return 1;
+	return TRUE;
 }
 
 void cpyBoard(struct Square temp[][SIZE], struct Square m[][SIZE]){
@@ -95,7 +95,7 @@ void cpyBoard(struct Square temp[][SIZE], struct Square m[][SIZE]){
 
 int isValidMove(int validMove){
 	if (validMove == 0)
-		return 1;
+		return TRUE;
 	else
-		return 0;
+		return FALSE;
 }
