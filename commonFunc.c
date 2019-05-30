@@ -23,11 +23,31 @@ int readMove() {
 		printf("Move : ");
 		scanf("%c", &move);
 		getchar();
-		if (move == 'w' || move == 'W') move = UP;
-		if (move == 'a' || move == 'A') move = LEFT;
-		if (move == 's' || move == 'S') move = DOWN;
-		if (move == 'd' || move == 'D') move = RIGHT;
-		if (move >= 0 && move <= 3) validMove = 1;
+		switch (move)
+		{
+		case 'w':
+		case 'W':
+			move = UP;
+			validMove = 1;
+			break;
+		case 'a':
+		case 'A':
+			move = LEFT;
+			validMove = 1;
+			break;
+		case 's':
+		case 'S':
+			move = DOWN;
+			validMove = 1;
+			break;
+		case 'D':
+		case 'd':
+			move = RIGHT;
+			validMove = 1;
+			break;
+		default:
+			break;
+		}
 	}
 	return move;
 }
