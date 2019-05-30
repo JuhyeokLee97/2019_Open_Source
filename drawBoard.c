@@ -33,6 +33,9 @@ int getEmptyCells(struct Pos empty[], struct Square m[][SIZE]) {
     2중 반복문을 이용해 구조체 m 배열 원소의 value == 0인 원소를 탐색한다.
     value == 0인 원소의 인덱스 정보를 empty에 저장한다.
     반환값 n : Square 구조체 배열에서 value == 0인 원소의 개수
+	
+	게임보드의 블록들 중 value값이 0인 블록의 가로, 세로 인덱스를 pos 형 구조체 배열 empty에 저장 후, 개수를 반환함
+	
  */
 
 void addRandomSquare(struct Square m[][SIZE]) {
