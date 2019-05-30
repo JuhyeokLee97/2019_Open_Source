@@ -42,7 +42,7 @@ void addRandomSquare(struct Square m[][SIZE]) {
 	struct Pos empty[SIZE * SIZE];
 	int random;
 	int n = getEmptyCells(empty, m);
-	if (n > 0) {
+	if (n > EMPTY) {
 		random = generateRandom(0, n);
 		m[empty[random].x][empty[random].y].value = 2;
 	}
@@ -55,14 +55,14 @@ void updateBoardCells(struct Square m[][SIZE], int value, int used) {
 	int i, j;
 	for (i = 0; i < SIZE; i++) {
 		for (j = 0; j < SIZE; j++) {
-			if (value >= 0) m[i][j].value = value;
-			if (used >= 0) m[i][j].used = used;
+			if (value >= EMPTY) m[i][j].value = value;
+			if (used >= EMPTY) m[i][j].used = used;
 		}
 	}
 }
 
 void initBoard(struct Square m[][SIZE]) {
-	updateBoardCells(m, 0, 0);
+	updateBoardCells(m, EMPTY, EMPTY);
 }/* 매개변수 m : 초기화 될 square 구조체 배열
     반환값 : 없음
     각 구조체 배열 원소의 멤버 변수 value와 used를 '0'으로 초기화

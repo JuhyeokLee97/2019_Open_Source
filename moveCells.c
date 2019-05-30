@@ -3,7 +3,7 @@
 
 void rightShiftCell(struct Square arr[], int currentPos) {
 	arr[currentPos + 1].value = arr[currentPos].value;
-	arr[currentPos].value = 0;
+	arr[currentPos].value = EMPTY;
 }/* 매개변수 arr : Square 구조체 1차원 배열
     매개변수 currentPos : 오른쪽으로 이동할 배열 원소의 인덱스
     반환값 : 없음
@@ -13,7 +13,7 @@ void rightShiftCell(struct Square arr[], int currentPos) {
 void mergeCells(struct Square arr[], int initialPos, int finalPos) {
 	arr[finalPos].value *= 2;
 	arr[finalPos].used = 1;
-	arr[initialPos].value = 0;
+	arr[initialPos].value = EMPTY;
 }/* 매개변수 arr : Square 구조체 1차원 배열
     매개변수 initialPos : 옮겨질 Square 구조체 배열 원소의 인덱스
     매개변수 finalPos : initialPos에서 finalPos 인덱스 위치로 값이 더해진다.

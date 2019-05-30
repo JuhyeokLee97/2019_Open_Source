@@ -33,14 +33,14 @@ int readMove() {
 }
 
 int isArrUsed(struct Square arr){
-	if (arr.used == 1)
+	if (arr.used != EMPTY)
 		return TRUE;
 	else
 		return FALSE;
 }
 
 int isEmptyValue(struct Square arr){
-	if (arr.value == 0)
+	if (arr.value != EMPTY)
 		return TRUE;
 	else
 		return FALSE;
@@ -54,17 +54,17 @@ int isEqualofValue(struct Square A, struct Square B){
 }
 int isPlayerLose(struct Squre m[][SIZE]){
 	struct Pos empty[SIZE*SIZE];
-	int cnt_empty = 0;
+	int cnt_empty = EMPTY;
 	cnt_empty = getEmptyCells(empty, m);
 
-	if (cnt_empty == 0){
+	if (cnt_empty == EMPTY){
 		if (playerLose(m))
-			return 1;
+			return TRUE;
 		else
-			return 0;
+			return FALSE;
 	}
 	else
-		return 0;
+		return FALSE;
 	
 }
 
@@ -75,7 +75,7 @@ int playerLose(struct Squre m[][SIZE]){
 	for (int i = 0; i < 4; i++){
 		cpyBoard(temp_board, m);
 		handleMove(i, temp_board);
-		if (getEmptyCells(empty, temp_board) > 0)
+		if (getEmptyCells(empty, temp_board) > EMPTY)
 			return FALSE;
 	}
 
@@ -94,7 +94,7 @@ void cpyBoard(struct Square temp[][SIZE], struct Square m[][SIZE]){
 }
 
 int isValidMove(int validMove){
-	if (validMove == 0)
+	if (validMove == EMPTY)
 		return TRUE;
 	else
 		return FALSE;

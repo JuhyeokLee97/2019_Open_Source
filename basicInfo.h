@@ -5,9 +5,10 @@
 #define SIZE 4
 #define TRUE 1
 #define FALSE 0
+#define EMPTY 0
 
 enum directions { RIGHT, DOWN, LEFT, UP };
-//directions 0 ->, 1 down,  2 <-, 3 up
+
 
 struct Square {
 	int value;	// 사용자에게 보여주는 data이다.
