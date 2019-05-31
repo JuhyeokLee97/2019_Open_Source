@@ -3,14 +3,23 @@
 
 void rightShiftCell(struct Square arr[], int currentPos) {
 	arr[currentPos + 1].value = arr[currentPos].value;
-	arr[currentPos].value = 0;
-}
+	arr[currentPos].value = EMPTY;
+}/* 매개변수 arr : Square 구조체 1차원 배열
+    매개변수 currentPos : 오른쪽으로 이동할 배열 원소의 인덱스
+    반환값 : 없음
+    currentPos위치의 배열 원소를 currentPos + 1위치로 이동한다.
+*/
 
 void mergeCells(struct Square arr[], int initialPos, int finalPos) {
 	arr[finalPos].value *= 2;
 	arr[finalPos].used = 1;
-	arr[initialPos].value = 0;
-}
+	arr[initialPos].value = EMPTY;
+}/* 매개변수 arr : Square 구조체 1차원 배열
+    매개변수 initialPos : 옮겨질 Square 구조체 배열 원소의 인덱스
+    매개변수 finalPos : initialPos에서 finalPos 인덱스 위치로 값이 더해진다.
+    반환값 : 없음
+    arr[initialPos].value값을 arr[finalPos].value값에 더한다.
+*/
 
 //only works for right direction, so we need to rotate the board before
 void slideArrayToRight(struct Square arr[]) {
@@ -46,18 +55,34 @@ void rotate(struct Square m[][SIZE]) {
 			m[n - j - 1][i] = temp;
 		}
 	}
-}
+}/* 함수 실행 예시
+  ====[Before Matrix]====
+  a11   a12   a13   a14
+  a21   a22   a23   a24
+  a31   a32   a33   a34
+  a41   a42   a43   a44
+  ====[After Matrix]====
+  a14   a24   a34   a44
+  a13   a23   a33   a43
+  a12   a22   a32   a42
+  a11   a21   a31   a41
+*/
 
 void doRotations(struct Square m[][SIZE], int times) {
 	int i;
 	for (i = 0; i < times; i++) {
 		rotate(m);
 	}
-};
+}/*매개변수 time : 반시계 방향으로 회전할 횟수
+    반환값 : 없음
+    Be called by function of 'handleMove'. 
+    파라미터 2차원 배열 m을 times번 반시계 방향으로 90도 회전시킨다. 
+	*/
 
 void handleMove(int direction, struct Square m[][SIZE]) {
 	int i;
-	int times = direction;
+	int times = direction;	// direction파라미터가 정수 값을 갖고, times변수에 반시계방향으로 회전할 횟수를 저장한다.
+
 
 	doRotations(m, times);
 	for (i = 0; i < SIZE; i++) {
