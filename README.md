@@ -11,7 +11,7 @@ All header files and source files are written in C. You can run files in Visual 
 
 | Name | Github | Email |
 |:---:|:---:|:---:|
-|Joohyeok Lee|[@zooh](https://github.com/zero5two4)|zero5.two4@gmail.com|
+|Joohyeok Lee|[@JuhyeokLee97](https://github.com/zero5two4)|zero5.two4@gmail.com|
 |Minju Kim|[@min942773](https://github.com/min942773)|min942773@gmail.com|
 |TeaHeul Jeon|[@taeheuljeon](https://github.com/taeheuljeon)|junth92@gmail.com|
  
